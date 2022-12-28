@@ -1,0 +1,16 @@
+<h1>Programmimg Book List </h1>
+<!-- <button (click)="this.isShowing=!this.isShowing;">
+
+    <ng-container *ngIf="!isShowing">Show Books</ng-container>
+    <ng-container *ngIf="isShowing">Hide Books</ng-container>
+     
+</button> -->
+
+ <ul *ngIf="isShowing" class="flex flex-wrap justify-center">
+    <ng-container *ngFor="let singlebook of books; let i=index">
+
+        <app-book class="w-1/2 p-5 text-center" [book]="singlebook"></app-book>
+
+    </ng-container>
+   
+ </ul>
